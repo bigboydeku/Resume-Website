@@ -59,9 +59,22 @@ body {
   float: left;
 }
 
+.menu-box-about {
+  width: 100px;
+  position: relative;
+  padding: 7px 14px;
+  border: 1px solid #586069;
+  color: #586069;
+  font-weight: 600;
+  line-height: 20px;
+  text-decoration: none;
+  float: left;
+}
+
 #menu-nav {
   text-decoration: none;
 }
+
 
 #menu-nav:hover {
   background-color: lightgrey;
