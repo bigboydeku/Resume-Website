@@ -75,6 +75,14 @@ body {
   text-decoration: none;
 }
 
+.m i {
+  color: black;
+}
+
+.m i:hover {
+  color: grey;
+}
+
 
 #menu-nav:hover {
   background-color: lightgrey;
