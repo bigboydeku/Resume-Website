@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  color: white;
+  color: black;
 }
 
 #name {
@@ -11,6 +11,8 @@
 .right-column {
   width: 80%;
   height: 100%;
+  max-width: 1920px;
+  max-height: 1080px;
   position: relative;
   overflow-x: hidden;
   top: 0;
@@ -19,142 +21,117 @@
   background-color: #fcfbfa !important;
 }
 
-.timeline {
-  position: relative;
-  max-width: 1200px;
+.about-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.about-image {
+  height: 100%;
+  width: 100%;
+
+}
+
+.about-description {
+  height: 50%;
+  min-width: 100%;
+  min-height: 50%;
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 10em 0 10em;
+}
+
+.about-description-text {
+  width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  background-color: #fafbfc;
+  word-wrap: break-word;
 }
 
-/*this is for the verticle black bar*/
-.timeline::after {
-  content: '';
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
   position: absolute;
-  width: 6px;
-  background-color: black;
-  top: 0;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 500px;
+  width: auto;
+  height: 400px;
+  padding-right: 1em;
+}
+
+.dotdiv {
+  position: relative;
   bottom: 0;
-  left: 50%;
-  margin-left: -3px;
 }
 
-.containers {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 45%;
+.about-font {
+  font-size: 1.2em;
 }
 
-/* Place the container to the left */
-.left {
-  left: 5%;
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-/* Place the container to the right */
-.right {
-  left: 50%;
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent black;
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent black transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
-}
-
-/* The actual content */
-.content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-  height: 300px;
-  max-height: 300px;
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 850px) {
-/* Place the timelime to the left */
-  .timeline::after {
-    left: 31px;
-  }
-
-/* Full-width containers */
-  .containers {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-
-/* Make sure that all arrows are pointing leftwards */
-  .containers::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-/* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-    left: 15px;
-  }
-
-/* Make all right containers behave like the left ones */
-  .right {
-    left: 5%;
-  }
-
-  .content {
-    height: 250px;
-    max-height: 250px;
-  }
-}
-
-#chicago {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("images/background.jpg");
-  background-size:contain;
-  background-attachment: fixed;
-}
-
-#uwindsor {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("images/uwindsor.jpg");
-  background-size:contain;
-  background-attachment: fixed;
-}
-
-#massey {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("images/highschool.jpg");
-  background-size:contain;
-  background-attachment: fixed;
-}
-
-#alberta{
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("images/alberta.jpg");
-  background-size:contain;
-  background-attachment: fixed;
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }

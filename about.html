@@ -12,7 +12,7 @@
 	<body>
 		<div id="container">
 			<div class="left-column">
-				<img src="images/test.png">
+				<img class="denis-icon" src="images/icon.png">
 				<h1 id="name" class="mb-1 centered">Denis Nadarevic</h1>
 				<p class="mb-1 centered text-grey">UofW - Business Administration and Computer Science</p>
 				<nav>
@@ -21,52 +21,175 @@
 					<a id="menu-nav" class="menu-box-about"href="contact.html">CONTACT</a>
 				</nav>
 				<div id="social-media" class="centered mt-1">
-					<div class="m"><a><i class="fab fa-github fa-2x"></i></a></div>
-					<div class="m"><a><i class="fab fa-facebook fa-2x"></i></a></div>
-					<div class="m"><a><i class="fab fa-linkedin fa-2x"></i></a></div>
+					<div class="m"><a href="https://github.com/bigboydeku"><i class="fab fa-github fa-2x"></i></a></div>
+					<div class="m"><a href="https://www.facebook.com/denis.nadarevic"><i class="fab fa-facebook fa-2x"></i></a></div>
+					<div class="m"><a href="https://www.linkedin.com/in/nadarevd/"><i class="fab fa-linkedin fa-2x"></i></a></div>
 				</div>
 			</div>
 
 			<!-- timeline -->
 			<div class="right-column">
-				<div class="timeline">
-					<div class="containers left">
-						<div id="chicago"class="content text-grey">
-							<h2>2019</h2>
-							<p>Approaching the end of my degree, hoping
-							to continue Computer Science (Masters Degree) and
-						to join an organization to grow.</p>
+				<div class="about-container">
+
+					<div class="about-image">
+						<div class="mySlides">
+							<img src="images/alberta-about.jpg" style="width:100%">
+							<div class="myText about-description one">
+								<h1 class="text-grey centered">1997 – 2007 </h1>
+								<p class="about-font mt-1 text-grey centered">
+									I was born in the farm town of High River, Alberta.
+									I grew up living around a mixture of different cultures.
+								  I spent my days at school, gaming, and exploring the
+									wilderness with friends. In 2007, my family decided to
+									move to Windsor, Ontario. I attended Talbot Trail Public
+									School for my elementary education..
+								</p>
+							</div>
+						</div>
+						<div class="mySlides">
+							<img src="images/windsor-about.jpg" style="width:100%">
+							<div class="myText about-description three">
+								<h1 class="text-grey centered">2011-2015</h1>
+								<p class="about-font mt-1 text-grey centered">
+									My passion for Business and Computer Science began in
+									freshmen year at Vincent Massey Secondary School.
+									I developed a wide variety of skills while I attended
+									the school and took enriched courses to further my
+									knowledge in all the sciences and maths. I became
+									familiar with Python as my first programming language.
+									I even made a portion of the popular video game Pokemon.
+									By the time senior year started, I have decided that
+									I wanted to begin a Business-related path.
+								</p>
+							</div>
+						</div>
+						<div class="mySlides">
+							<img src="images/chicago-about.jpg" style="width:100%">
+							<div class="myText about-description three">
+								<h1 class="text-grey centered">2015-Present</h1>
+								<p class="about-font mt-1 text-grey centered">
+									I started my university life at the University of
+									Windsor as a Business Administration major and
+									eventually switched into a combined major of Business
+									Administration and Computer Science because I want to
+									learn more. As I approach my final few semesters
+									of this degree, I realized that I wanted to make
+									Computer Science a bigger part of my life and have
+									decided that I want to pursue a Masters degree in
+									the future. With my knowledge of all the concentrations
+									in Business and my passion to do something big with
+									programming, I hope that I can make a organization
+									proud of my efforts.
+								</p>
+							</div>
+						</div>
+						<div class="mySlides">
+							<img src="images/piano-about.jpg" style="width:100%">
+							<div class="myText about-description three">
+								<h1 class="text-grey centered">Passions</h1>
+								<p class="about-font mt-1 text-grey centered">
+									Growing up with Bosnian roots while going to school
+									with Canadian and Chinese friends gave me a passion
+									for diversity and ultimately resulted in my current
+									love for languages. I’ve been studying Japanese for
+									a few years and will be starting Korean.<br><br>
+									Music has also been a big passion for mine. As mentioned
+									before, I developed a wide range of skills and piano
+									has been something that I’ve been working on for the
+									past few years. Here are some of my covers. I consider
+									 my biggest life goal to be a passion. My life goal is
+									 to make a big impact in the world in some form.
+
+								</p>
+							</div>
 						</div>
 					</div>
-					<div class="containers right">
-						<div id="uwindsor" class="content text-grey">
-							<h2>2017</h2>
-							<p>Switched into Business Administration and Computer Science.
-								 As an undergraduate, I have only touched the surface of what
-								 it means to be a Computer Scientist, as well as a Businessman. </p>
-						</div>
+					<div class="centered dotdiv" style="text-align:center">
+						<span class="dot" onclick="currentSlide(1)"></span>
+						<span class="dot" onclick="currentSlide(2)"></span>
+						<span class="dot" onclick="currentSlide(3)"></span>
+						<span class="dot" onclick="currentSlide(4)"></span>
 					</div>
-					<div class="containers left">
-						<div id="massey" class="content text-grey">
-							<h2>2015</h2>
-							<p>I graduated from Vincent Massey Secondary School. I've always wanted to
-									 have a passion for something, which made it difficult
-									 to decide what I wanted to stick with.
-									 I began my student life as a Business undergrad student.</p>
-						</div>
-					</div>
-					<div class="containers right">
-						<div id="alberta" class="content text-grey">
-							<h2>1997</h2>
-							<p>I was born in a small town near the Rocky Mountains in Alberta.
-								I was taken care of by my Bosnian parents along side a wonderful Canadian family.
-								My upbringing is the reason for
-								my love for different cultures and, ultimately, my passion for
-								learning languages.</p>
-						</div>
-					</div>
-				</div>
 			</div>
+			<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+				var text = document.getElementsByClassName("myText");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			      dots[i].className = dots[i].className.replace(" active", "");
+			  }
+
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			}
+			</script>
 		</div>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+<!--
+<div class="timeline">
+	<div class="containers left">
+		<div id="chicago"class="content text-grey">
+			<h2>2019</h2>
+			<p>Approaching the end of my degree, hoping
+			to continue Computer Science (Masters Degree) and
+		to join an organization to grow.</p>
+		</div>
+	</div>
+	<div class="containers right">
+		<div id="uwindsor" class="content text-grey">
+			<h2>2017</h2>
+			<p>Switched into Business Administration and Computer Science.
+				 As an undergraduate, I have only touched the surface of what
+				 it means to be a Computer Scientist, as well as a Businessman. </p>
+		</div>
+	</div>
+	<div class="containers left">
+		<div id="massey" class="content text-grey">
+			<h2>2015</h2>
+			<p>I graduated from Vincent Massey Secondary School. I've always wanted to
+					 have a passion for something, which made it difficult
+					 to decide what I wanted to stick with.
+					 I began my student life as a Business undergrad student.</p>
+		</div>
+	</div>
+	<div class="containers right">
+		<div id="alberta" class="content text-grey">
+			<h2>1997</h2>
+			<p>I was born in a small town near the Rocky Mountains in Alberta.
+				I was taken care of by my Bosnian parents along side a wonderful Canadian family.
+				My upbringing is the reason for
+				my love for different cultures and, ultimately, my passion for
+				learning languages.</p>
+		</div>
+	</div>
+</div>
+
+ -->

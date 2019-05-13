@@ -62,6 +62,13 @@
   width: 200px;
 }
 
+#project-picture:hover {
+  -webkit-filter: brightness(70%);
+  -moz-filter: brightness(70%);
+  -ms-filter: brightness(70%);
+  -o-filter: brightness(70%);
+}
+
 #project-header {
   font-size: 1em;
 }
